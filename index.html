@@ -1,210 +1,252 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Family Persatuan Pejuang Creator</title>
+<title>Family Persatuan Pejuang Creator</title>
 
-  <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
+<style>
+*{
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
+}
 
-    body {
-      font-family: Arial, sans-serif;
-      background: #0d1b2a;
-      color: #e5e7eb;
-      min-height: 100vh;
-      padding-bottom: 90px;
-    }
+body{
+  font-family:Arial,sans-serif;
+  background:#071522;
+  color:white;
+  line-height:1.5;
+}
 
-    header {
-      background: #172b44;
-      padding: 25px 20px;
-      border-bottom: 1px solid #294867;
-    }
+header{
+  padding:25px 18px;
+  text-align:center;
+  background:#10283d;
+  border-bottom:1px solid #315a78;
+}
 
-    header h1 {
-      font-size: 23px;
-      margin-bottom: 10px;
-    }
+header h1{
+  font-size:22px;
+}
 
-    header p {
-      color: #cbd5e1;
-      font-size: 15px;
-    }
+header p{
+  margin-top:8px;
+  color:#9fb4c5;
+  font-size:13px;
+}
 
-    .container {
-      max-width: 700px;
-      margin: auto;
-      padding: 20px;
-    }
+.container{
+  max-width:700px;
+  margin:auto;
+  padding:15px;
+}
 
-    .welcome {
-      background: #172b44;
-      border: 1px solid #315a80;
-      border-radius: 20px;
-      padding: 20px;
-      margin-bottom: 20px;
-    }
+.section{
+  background:#10283d;
+  border:1px solid #315a78;
+  border-radius:18px;
+  padding:18px;
+  margin-bottom:16px;
+}
 
-    .welcome h2 {
-      margin-bottom: 8px;
-    }
+.section h2{
+  font-size:19px;
+  margin-bottom:15px;
+}
 
-    .cards {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 15px;
-      margin-bottom: 22px;
-    }
+.cards{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:10px;
+}
 
-    .card {
-      background: #172b44;
-      border: 1px solid #315a80;
-      border-radius: 20px;
-      padding: 22px;
-    }
+.card{
+  background:#091d2e;
+  border:1px solid #294b65;
+  border-radius:14px;
+  padding:15px;
+}
 
-    .card strong {
-      display: block;
-      font-size: 34px;
-      color: #57d5f5;
-      margin-bottom: 8px;
-    }
+.card strong{
+  display:block;
+  color:#4bd4ff;
+  font-size:27px;
+}
 
-    .card span {
-      color: #b9c4d1;
-      font-size: 16px;
-    }
+.card span{
+  display:block;
+  margin-top:5px;
+  font-size:12px;
+  color:#b5c5d1;
+}
 
-    .panel {
-      background: #172b44;
-      border: 1px solid #315a80;
-      border-radius: 20px;
-      padding: 20px;
-      margin-bottom: 20px;
-    }
+input,select,textarea{
+  width:100%;
+  background:#091d2e;
+  color:white;
+  border:1px solid #315a78;
+  border-radius:10px;
+  padding:13px;
+  margin-bottom:10px;
+  font-size:15px;
+}
 
-    .panel h2 {
-      margin-bottom: 18px;
-    }
+textarea{
+  min-height:90px;
+  resize:vertical;
+}
 
-    input, select {
-      width: 100%;
-      padding: 15px;
-      margin-bottom: 12px;
-      border-radius: 12px;
-      border: 1px solid #456b8e;
-      background: #0d1b2a;
-      color: white;
-      font-size: 16px;
-    }
+button{
+  width:100%;
+  background:#169bd5;
+  color:white;
+  border:none;
+  border-radius:10px;
+  padding:13px;
+  font-size:15px;
+  font-weight:bold;
+  cursor:pointer;
+}
 
-    button {
-      width: 100%;
-      padding: 14px;
-      border: none;
-      border-radius: 12px;
-      background: #18b8d8;
-      color: white;
-      font-size: 16px;
-      font-weight: bold;
-      cursor: pointer;
-      margin-top: 5px;
-    }
+button:active{
+  transform:scale(.98);
+}
 
-    button:active {
-      transform: scale(.98);
-    }
+.item{
+  background:#091d2e;
+  border:1px solid #294b65;
+  border-radius:12px;
+  padding:13px;
+  margin-bottom:10px;
+}
 
-    .ranking-item,
-    .history-item,
-    .member-item {
-      background: #0d1b2a;
-      border: 1px solid #294867;
-      padding: 15px;
-      border-radius: 14px;
-      margin-top: 10px;
-    }
+.item strong{
+  display:block;
+}
 
-    .ranking-item {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
+.item small{
+  display:block;
+  margin-top:5px;
+  color:#9fb4c5;
+}
 
-    .hidden {
-      display: none;
-    }
+.row{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:10px;
+}
 
-    .bottom-nav {
-      position: fixed;
-      bottom: 0;
-      left: 0;
-      width: 100%;
-      background: #101f31;
-      border-top: 1px solid #315a80;
-      display: flex;
-      justify-content: space-around;
-      padding: 12px 5px;
-    }
+.delete{
+  width:auto;
+  background:#c83f4b;
+  padding:8px 12px;
+  font-size:12px;
+}
 
-    .nav-btn {
-      background: transparent;
-      color: #b9c4d1;
-      width: auto;
-      margin: 0;
-      padding: 8px 12px;
-      font-size: 13px;
-    }
+.rank{
+  display:flex;
+  align-items:center;
+  gap:12px;
+  padding:12px 0;
+  border-bottom:1px solid #294b65;
+}
 
-    .nav-btn.active {
-      color: #57d5f5;
-    }
+.rank:last-child{
+  border-bottom:none;
+}
 
-    .delete {
-      background: #c0392b;
-      margin-top: 10px;
-    }
+.rank-number{
+  min-width:38px;
+  font-size:20px;
+  font-weight:bold;
+}
 
-    .small {
-      color: #9fb0c0;
-      margin-top: 5px;
-      font-size: 14px;
-    }
+.rank-name{
+  flex:1;
+}
 
-    @media (max-width: 500px) {
-      .cards {
-        grid-template-columns: 1fr 1fr;
-      }
+.empty{
+  text-align:center;
+  color:#9fb4c5;
+  padding:20px 5px;
+}
 
-      header h1 {
-        font-size: 20px;
-      }
-    }
-  </style>
+.bonus{
+  background:#091d2e;
+  border:1px solid #294b65;
+  border-radius:12px;
+  padding:15px;
+  margin-bottom:10px;
+}
+
+.chat-message{
+  background:#091d2e;
+  border-left:3px solid #4bd4ff;
+  border-radius:8px;
+  padding:12px;
+  margin-bottom:10px;
+}
+
+.chat-message small{
+  color:#9fb4c5;
+}
+
+.profile{
+  text-align:center;
+}
+
+.avatar{
+  width:80px;
+  height:80px;
+  margin:0 auto 12px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  border-radius:50%;
+  background:#091d2e;
+  border:2px solid #4bd4ff;
+  font-size:38px;
+}
+
+.role{
+  display:inline-block;
+  background:#169bd5;
+  padding:5px 12px;
+  border-radius:20px;
+  margin-top:8px;
+  font-size:12px;
+}
+
+footer{
+  text-align:center;
+  padding:25px 15px 40px;
+  color:#70889a;
+  font-size:12px;
+}
+
+@media(max-width:400px){
+  .cards{
+    grid-template-columns:1fr;
+  }
+}
+</style>
 </head>
 
 <body>
 
 <header>
   <h1>👑 FAMILY PERSATUAN PEJUANG CREATOR</h1>
-  <p>🎥 LIVE • 💎 BERLIAN • 🏆 RANKING</p>
+  <p>📹 LIVE • 💎 BERLIAN • 🏆 RANKING</p>
 </header>
 
 <div class="container">
 
   <!-- DASHBOARD -->
-  <section id="dashboard">
-
-    <div class="welcome">
-      <h2>👋 Selamat Datang</h2>
-      <p>Dashboard Family Persatuan Pejuang Creator</p>
-    </div>
+  <div class="section">
+    <h2>🏠 Dashboard</h2>
 
     <div class="cards">
       <div class="card">
@@ -219,7 +261,7 @@
 
       <div class="card">
         <strong id="totalLive">0</strong>
-        <span>🎥 Total Live</span>
+        <span>📹 Total Live</span>
       </div>
 
       <div class="card">
@@ -227,298 +269,356 @@
         <span>⏱️ Total Jam Live</span>
       </div>
     </div>
+  </div>
 
-    <div class="panel">
-      <h2>🏆 Ranking Berlian</h2>
-      <div id="rankingDashboard"></div>
-    </div>
+  <!-- DAFTAR ANGGOTA -->
+  <div class="section">
+    <h2>👥 Daftar Anggota</h2>
+    <div id="anggotaList"></div>
+  </div>
 
-  </section>
+  <!-- TAMBAH ANGGOTA -->
+  <div class="section">
+    <h2>➕ Tambah Anggota</h2>
 
+    <input
+      id="namaAnggota"
+      type="text"
+      placeholder="Masukkan nama anggota"
+    >
+
+    <input
+      id="idTikTok"
+      type="text"
+      placeholder="Masukkan ID TikTok"
+    >
+
+    <select id="roleAnggota">
+      <option value="Anggota">👤 Anggota</option>
+      <option value="Admin">🛡️ Admin</option>
+    </select>
+
+    <button onclick="tambahAnggota()">
+      ➕ Tambah Anggota
+    </button>
+  </div>
 
   <!-- CATAT LIVE -->
-  <section id="catat" class="hidden">
+  <div class="section">
+    <h2>📹 Catat Live</h2>
 
-    <div class="panel">
-      <h2>🎥 Catat Live</h2>
+    <select id="namaLive">
+      <option value="">Pilih Anggota</option>
+    </select>
 
-      <select id="liveNama">
-        <option value="">Pilih Anggota</option>
-      </select>
+    <input
+      id="durasiLive"
+      type="number"
+      min="0"
+      step="0.5"
+      placeholder="Durasi live (jam)"
+    >
 
-      <input
-        type="number"
-        id="berlian"
-        placeholder="Jumlah Berlian"
-      >
+    <input
+      id="berlianLive"
+      type="number"
+      min="0"
+      placeholder="Jumlah berlian"
+    >
 
-      <input
-        type="number"
-        id="jamLive"
-        placeholder="Jumlah Jam Live"
-      >
+    <button onclick="catatLive()">
+      💾 Simpan Data Live
+    </button>
+  </div>
 
-      <button onclick="catatLive()">
-        💾 Simpan Catatan Live
-      </button>
+  <!-- TOTAL BERLIAN -->
+  <div class="section">
+    <h2>💎 Total Berlian Family</h2>
+    <div class="card">
+      <strong id="berlianBesar">0</strong>
+      <span>Total berlian seluruh anggota</span>
     </div>
+  </div>
 
-  </section>
-
+  <!-- RANKING -->
+  <div class="section">
+    <h2>🏆 Ranking Berlian</h2>
+    <div id="rankingList"></div>
+  </div>
 
   <!-- RIWAYAT -->
-  <section id="riwayat" class="hidden">
+  <div class="section">
+    <h2>📜 Riwayat Live</h2>
+    <div id="riwayatList"></div>
+  </div>
 
-    <div class="panel">
-      <h2>📜 Riwayat Live</h2>
-      <div id="riwayatList"></div>
+  <!-- BONUS -->
+  <div class="section">
+    <h2>🎁 Bonus Anggota</h2>
+
+    <div class="bonus">
+      <strong>🥉 Bonus Aktif</strong>
+      <small>Bonus untuk anggota yang rutin melakukan live.</small>
     </div>
 
-  </section>
-
-
-  <!-- KELOLA -->
-  <section id="kelola" class="hidden">
-
-    <div class="panel">
-      <h2>⚙️ Kelola Anggota</h2>
-
-      <input
-        type="text"
-        id="namaAnggota"
-        placeholder="Nama anggota"
-      >
-
-      <select id="roleAnggota">
-        <option value="anggota">👤 Anggota</option>
-        <option value="admin">🛡️ Admin</option>
-        <option value="ketua">👑 Ketua</option>
-      </select>
-
-      <button onclick="tambahAnggota()">
-        ➕ Tambah Anggota
-      </button>
+    <div class="bonus">
+      <strong>🥈 Bonus Berlian</strong>
+      <small>Bonus berdasarkan pencapaian target berlian.</small>
     </div>
 
-    <div class="panel">
-      <h2>👥 Daftar Anggota</h2>
-      <div id="anggotaList"></div>
+    <div class="bonus">
+      <strong>🥇 Bonus Ranking</strong>
+      <small>Hadiah khusus untuk ranking terbaik.</small>
     </div>
+  </div>
 
-  </section>
+  <!-- CHAT -->
+  <div class="section">
+    <h2>💬 Chat Family</h2>
+
+    <div id="chatList"></div>
+
+    <input
+      id="namaChat"
+      type="text"
+      placeholder="Nama kamu"
+    >
+
+    <textarea
+      id="pesanChat"
+      placeholder="Tulis pesan..."
+    ></textarea>
+
+    <button onclick="kirimChat()">
+      📤 Kirim Pesan
+    </button>
+  </div>
+
+  <!-- PROFIL -->
+  <div class="section profile">
+    <div class="avatar">👤</div>
+
+    <h2>WAHYUDI PRATAMA</h2>
+
+    <div class="role">👑 KETUA FAMILY</div>
+
+    <p style="margin-top:15px;color:#9fb4c5;">
+      Family Persatuan Pejuang Creator
+    </p>
+  </div>
 
 </div>
 
-
-<nav class="bottom-nav">
-
-  <button class="nav-btn active"
-    onclick="bukaTab('dashboard', this)">
-    💎<br>Dashboard
-  </button>
-
-  <button class="nav-btn"
-    onclick="bukaTab('catat', this)">
-    🎥<br>Catat Live
-  </button>
-
-  <button class="nav-btn"
-    onclick="bukaTab('riwayat', this)">
-    📜<br>Riwayat
-  </button>
-
-  <button class="nav-btn"
-    onclick="bukaTab('kelola', this)">
-    ⚙️<br>Kelola
-  </button>
-
-</nav>
-
+<footer>
+  © 2026 Family Persatuan Pejuang Creator
+</footer>
 
 <script>
 
 let anggota =
-  JSON.parse(localStorage.getItem("anggota")) || [];
+  JSON.parse(localStorage.getItem("anggotaFamily")) || [
+    {
+      id: Date.now(),
+      nama: "WAHYUDI PRATAMA",
+      tiktok: "-",
+      role: "Ketua",
+      berlian: 0,
+      jam: 0,
+      live: 0
+    }
+  ];
 
 let riwayat =
-  JSON.parse(localStorage.getItem("riwayat")) || [];
+  JSON.parse(localStorage.getItem("riwayatFamily")) || [];
+
+let chat =
+  JSON.parse(localStorage.getItem("chatFamily")) || [];
 
 
-function simpanData() {
+function simpanData(){
   localStorage.setItem(
-    "anggota",
+    "anggotaFamily",
     JSON.stringify(anggota)
   );
 
   localStorage.setItem(
-    "riwayat",
+    "riwayatFamily",
     JSON.stringify(riwayat)
+  );
+
+  localStorage.setItem(
+    "chatFamily",
+    JSON.stringify(chat)
   );
 }
 
 
-function bukaTab(tab, tombol) {
-
-  document.querySelectorAll("section")
-    .forEach(item => {
-      item.classList.add("hidden");
-    });
-
-  document.getElementById(tab)
-    .classList.remove("hidden");
-
-  document.querySelectorAll(".nav-btn")
-    .forEach(btn => {
-      btn.classList.remove("active");
-    });
-
-  tombol.classList.add("active");
-
-  render();
-}
-
-
-function tambahAnggota() {
+function tambahAnggota(){
 
   const nama =
-    document.getElementById("namaAnggota")
-    .value.trim();
+    document.getElementById("namaAnggota").value.trim();
+
+  const tiktok =
+    document.getElementById("idTikTok").value.trim();
 
   const role =
-    document.getElementById("roleAnggota")
-    .value;
+    document.getElementById("roleAnggota").value;
 
-  if (!nama) {
-    alert("Masukkan nama anggota!");
+  if(!nama || !tiktok){
+    alert("Isi nama dan ID TikTok terlebih dahulu.");
     return;
   }
 
   anggota.push({
     id: Date.now(),
     nama: nama,
+    tiktok: tiktok,
     role: role,
     berlian: 0,
-    jamLive: 0,
-    jumlahLive: 0
+    jam: 0,
+    live: 0
   });
 
   document.getElementById("namaAnggota").value = "";
+  document.getElementById("idTikTok").value = "";
 
   simpanData();
-
   render();
 
-  alert("Anggota berhasil ditambahkan!");
+  alert("Anggota berhasil ditambahkan.");
 }
 
 
-function hapusAnggota(id) {
+function hapusAnggota(id){
 
-  if (!confirm("Hapus anggota ini?")) return;
+  const member =
+    anggota.find(item => item.id === id);
 
-  anggota =
-    anggota.filter(item => item.id !== id);
+  if(member.role === "Ketua"){
+    alert("Ketua tidak dapat dihapus.");
+    return;
+  }
 
-  simpanData();
+  if(confirm("Hapus anggota ini?")){
+    anggota =
+      anggota.filter(item => item.id !== id);
 
-  render();
+    simpanData();
+    render();
+  }
 }
 
 
-function catatLive() {
+function catatLive(){
 
   const id =
-    Number(document.getElementById("liveNama").value);
-
-  const berlian =
-    Number(document.getElementById("berlian").value) || 0;
+    Number(document.getElementById("namaLive").value);
 
   const jam =
-    Number(document.getElementById("jamLive").value) || 0;
+    Number(document.getElementById("durasiLive").value) || 0;
 
-  if (!id) {
-    alert("Pilih anggota terlebih dahulu!");
+  const berlian =
+    Number(document.getElementById("berlianLive").value) || 0;
+
+  if(!id){
+    alert("Pilih anggota terlebih dahulu.");
+    return;
+  }
+
+  if(jam <= 0){
+    alert("Masukkan durasi live.");
     return;
   }
 
   const member =
     anggota.find(item => item.id === id);
 
+  member.jam += jam;
   member.berlian += berlian;
-  member.jamLive += jam;
-  member.jumlahLive += 1;
+  member.live += 1;
 
   riwayat.unshift({
     id: Date.now(),
     nama: member.nama,
-    berlian: berlian,
     jam: jam,
-    waktu: new Date().toLocaleString("id-ID")
+    berlian: berlian,
+    tanggal: new Date().toLocaleString("id-ID")
   });
 
-  document.getElementById("berlian").value = "";
-  document.getElementById("jamLive").value = "";
+  document.getElementById("durasiLive").value = "";
+  document.getElementById("berlianLive").value = "";
 
   simpanData();
-
   render();
 
-  alert("Live berhasil dicatat!");
+  alert("Data live berhasil disimpan.");
 }
 
 
-function render() {
+function kirimChat(){
+
+  const nama =
+    document.getElementById("namaChat").value.trim();
+
+  const pesan =
+    document.getElementById("pesanChat").value.trim();
+
+  if(!nama || !pesan){
+    alert("Isi nama dan pesan.");
+    return;
+  }
+
+  chat.unshift({
+    id: Date.now(),
+    nama: nama,
+    pesan: pesan,
+    waktu: new Date().toLocaleString("id-ID")
+  });
+
+  document.getElementById("pesanChat").value = "";
+
+  simpanData();
+  render();
+}
+
+
+function render(){
 
   const totalBerlian =
     anggota.reduce(
-      (total, item) =>
+      (total,item) =>
         total + Number(item.berlian),
       0
     );
 
   const totalJam =
     anggota.reduce(
-      (total, item) =>
-        total + Number(item.jamLive),
+      (total,item) =>
+        total + Number(item.jam),
       0
     );
 
   const totalLive =
     anggota.reduce(
-      (total, item) =>
-        total + Number(item.jumlahLive),
+      (total,item) =>
+        total + Number(item.live),
       0
     );
 
+  document.getElementById("totalAnggota").textContent =
+    anggota.length;
 
-  document.getElementById("totalAnggota")
-    .textContent = anggota.length;
+  document.getElementById("totalBerlian").textContent =
+    totalBerlian;
 
-  document.getElementById("totalBerlian")
-    .textContent = totalBerlian;
+  document.getElementById("totalLive").textContent =
+    totalLive;
 
-  document.getElementById("totalJam")
-    .textContent = totalJam;
+  document.getElementById("totalJam").textContent =
+    totalJam;
 
-  document.getElementById("totalLive")
-    .textContent = totalLive;
-
-
-  const select =
-    document.getElementById("liveNama");
-
-  select.innerHTML =
-    '<option value="">Pilih Anggota</option>';
-
-  anggota.forEach(item => {
-
-    select.innerHTML += `
-      <option value="${item.id}">
-        ${item.nama}
-      </option>
-    `;
-
-  });
+  document.getElementById("berlianBesar").textContent =
+    "💎 " + totalBerlian;
 
 
   const anggotaList =
@@ -529,108 +629,138 @@ function render() {
   anggota.forEach(item => {
 
     anggotaList.innerHTML += `
-      <div class="member-item">
+      <div class="item">
+        <div class="row">
+          <div>
+            <strong>${item.nama}</strong>
+            <small>
+              ${item.role} • @${item.tiktok}
+            </small>
+            <small>
+              💎 ${item.berlian} •
+              📹 ${item.live} Live •
+              ⏱️ ${item.jam} Jam
+            </small>
+          </div>
 
-        <strong>${item.nama}</strong>
-
-        <div class="small">
-          ${item.role.toUpperCase()}
-          • 💎 ${item.berlian}
-          • 🎥 ${item.jumlahLive} Live
-          • ⏱️ ${item.jamLive} Jam
+          ${
+            item.role !== "Ketua"
+            ? `<button class="delete"
+                 onclick="hapusAnggota(${item.id})">
+                 Hapus
+               </button>`
+            : ""
+          }
         </div>
-
-        <button
-          class="delete"
-          onclick="hapusAnggota(${item.id})">
-          🗑️ Hapus
-        </button>
-
       </div>
     `;
+  });
 
+
+  const namaLive =
+    document.getElementById("namaLive");
+
+  namaLive.innerHTML =
+    `<option value="">Pilih Anggota</option>`;
+
+  anggota.forEach(item => {
+    namaLive.innerHTML += `
+      <option value="${item.id}">
+        ${item.nama}
+      </option>
+    `;
   });
 
 
   const ranking =
     [...anggota].sort(
-      (a, b) =>
-        Number(b.berlian) -
-        Number(a.berlian)
+      (a,b) => b.berlian - a.berlian
     );
 
+  const rankingList =
+    document.getElementById("rankingList");
 
-  const rankingDashboard =
-    document.getElementById("rankingDashboard");
+  rankingList.innerHTML = "";
 
-  rankingDashboard.innerHTML = "";
+  ranking.forEach((item,index) => {
 
-  if (ranking.length === 0) {
+    let medali = "";
 
-    rankingDashboard.innerHTML =
-      "<p class='small'>Belum ada data ranking.</p>";
+    if(index === 0) medali = "🥇";
+    else if(index === 1) medali = "🥈";
+    else if(index === 2) medali = "🥉";
+    else medali = "#" + (index + 1);
 
-  } else {
-
-    ranking.slice(0, 10)
-      .forEach((item, index) => {
-
-        rankingDashboard.innerHTML += `
-          <div class="ranking-item">
-            <strong>
-              #${index + 1} ${item.nama}
-            </strong>
-
-            <span>
-              💎 ${item.berlian}
-            </span>
-          </div>
-        `;
-
-      });
-
-  }
+    rankingList.innerHTML += `
+      <div class="rank">
+        <div class="rank-number">${medali}</div>
+        <div class="rank-name">
+          <strong>${item.nama}</strong>
+          <small>
+            📹 ${item.live} Live •
+            ⏱️ ${item.jam} Jam
+          </small>
+        </div>
+        <strong>💎 ${item.berlian}</strong>
+      </div>
+    `;
+  });
 
 
   const riwayatList =
     document.getElementById("riwayatList");
 
-  riwayatList.innerHTML = "";
-
-  if (riwayat.length === 0) {
+  if(riwayat.length === 0){
 
     riwayatList.innerHTML =
-      "<p class='small'>Belum ada riwayat live.</p>";
+      `<div class="empty">
+        Belum ada riwayat live.
+      </div>`;
 
   } else {
 
+    riwayatList.innerHTML = "";
+
     riwayat.forEach(item => {
-
       riwayatList.innerHTML += `
-        <div class="history-item">
-
-          <strong>
-            🎥 ${item.nama}
-          </strong>
-
-          <div class="small">
+        <div class="item">
+          <strong>📹 ${item.nama}</strong>
+          <small>
+            ⏱️ ${item.jam} Jam •
             💎 ${item.berlian} Berlian
-            • ⏱️ ${item.jam} Jam
-          </div>
-
-          <div class="small">
-            📅 ${item.waktu}
-          </div>
-
+          </small>
+          <small>📅 ${item.tanggal}</small>
         </div>
       `;
-
     });
-
   }
 
-}
 
+  const chatList =
+    document.getElementById("chatList");
+
+  if(chat.length === 0){
+
+    chatList.innerHTML =
+      `<div class="empty">
+        Belum ada pesan. Mulai percakapan 👋
+      </div>`;
+
+  } else {
+
+    chatList.innerHTML = "";
+
+    chat.forEach(item => {
+      chatList.innerHTML += `
+        <div class="chat-message">
+          <strong>${item.nama}</strong>
+          <p>${item.pesan}</p>
+          <small>${item.waktu}</small>
+        </div>
+      `;
+    });
+  }
+}
 
 render();
 
