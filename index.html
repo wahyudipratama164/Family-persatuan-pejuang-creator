@@ -7,239 +7,132 @@
 <title>Family Persatuan Pejuang Creator</title>
 
 <style>
-*{
-  box-sizing:border-box;
-  margin:0;
-  padding:0;
-}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Arial,sans-serif;background:#071522;color:#fff}
+.hidden{display:none!important}
 
-body{
-  font-family:Arial,sans-serif;
-  background:#071522;
-  color:white;
-  line-height:1.5;
+.login-page{
+  min-height:100vh;display:flex;align-items:center;
+  justify-content:center;padding:20px
 }
+.login-box,.section{
+  background:#10283d;border:1px solid #315a78;
+  border-radius:18px;padding:18px
+}
+.login-box{width:100%;max-width:430px}
+h1,h2{text-align:center;margin-bottom:15px}
+.login-box p{text-align:center;color:#aebfcb;margin-bottom:15px}
 
 header{
-  padding:25px 18px;
-  text-align:center;
-  background:#10283d;
-  border-bottom:1px solid #315a78;
+  text-align:center;padding:22px 15px;
+  background:#10283d;border-bottom:1px solid #315a78
+}
+header p{color:#aebfcb;font-size:13px}
+.user-info{
+  margin-top:15px;background:#091d2e;
+  border-radius:12px;padding:10px
 }
 
-header h1{
-  font-size:22px;
-}
-
-header p{
-  margin-top:8px;
-  color:#9fb4c5;
-  font-size:13px;
-}
-
-.container{
-  max-width:700px;
-  margin:auto;
-  padding:15px;
-}
-
-.section{
-  background:#10283d;
-  border:1px solid #315a78;
-  border-radius:18px;
-  padding:18px;
-  margin-bottom:16px;
-}
-
-.section h2{
-  font-size:19px;
-  margin-bottom:15px;
-}
+.container{max-width:700px;margin:auto;padding:15px}
+.section{margin-bottom:15px}
+.section h2{font-size:19px}
 
 .cards{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:10px;
+  display:grid;grid-template-columns:1fr 1fr;gap:10px
 }
-
-.card{
-  background:#091d2e;
-  border:1px solid #294b65;
-  border-radius:14px;
-  padding:15px;
+.card,.item{
+  background:#091d2e;border:1px solid #294b65;
+  border-radius:12px;padding:13px
 }
-
 .card strong{
-  display:block;
-  color:#4bd4ff;
-  font-size:27px;
+  display:block;font-size:25px;color:#4bd4ff
 }
-
-.card span{
-  display:block;
-  margin-top:5px;
-  font-size:12px;
-  color:#b5c5d1;
-}
+.card span,.item small{display:block;color:#aebfcb;font-size:12px}
 
 input,select,textarea{
-  width:100%;
-  background:#091d2e;
-  color:white;
-  border:1px solid #315a78;
-  border-radius:10px;
-  padding:13px;
-  margin-bottom:10px;
-  font-size:15px;
+  width:100%;padding:13px;margin-bottom:10px;
+  border-radius:10px;border:1px solid #315a78;
+  background:#091d2e;color:#fff;font-size:15px
 }
-
-textarea{
-  min-height:90px;
-  resize:vertical;
-}
+textarea{min-height:80px}
 
 button{
-  width:100%;
-  background:#169bd5;
-  color:white;
-  border:none;
-  border-radius:10px;
-  padding:13px;
-  font-size:15px;
-  font-weight:bold;
-  cursor:pointer;
+  width:100%;padding:13px;border:0;border-radius:10px;
+  background:#169bd5;color:#fff;font-weight:bold;
+  font-size:15px;margin-bottom:8px
 }
-
-button:active{
-  transform:scale(.98);
-}
-
-.item{
-  background:#091d2e;
-  border:1px solid #294b65;
-  border-radius:12px;
-  padding:13px;
-  margin-bottom:10px;
-}
-
-.item strong{
-  display:block;
-}
-
-.item small{
-  display:block;
-  margin-top:5px;
-  color:#9fb4c5;
-}
+.danger{background:#c83f4b}
+.small-btn{width:auto;padding:8px 10px;font-size:12px;margin:0}
 
 .row{
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  gap:10px;
+  display:flex;justify-content:space-between;
+  align-items:center;gap:10px
 }
-
-.delete{
-  width:auto;
-  background:#c83f4b;
-  padding:8px 12px;
-  font-size:12px;
-}
+.item{margin-bottom:10px}
 
 .rank{
-  display:flex;
-  align-items:center;
-  gap:12px;
-  padding:12px 0;
-  border-bottom:1px solid #294b65;
+  display:flex;align-items:center;gap:10px;
+  padding:12px 0;border-bottom:1px solid #294b65
 }
+.rank-name{flex:1}
+.empty{text-align:center;color:#aebfcb;padding:15px}
 
-.rank:last-child{
-  border-bottom:none;
-}
-
-.rank-number{
-  min-width:38px;
-  font-size:20px;
-  font-weight:bold;
-}
-
-.rank-name{
-  flex:1;
-}
-
-.empty{
-  text-align:center;
-  color:#9fb4c5;
-  padding:20px 5px;
-}
-
-.bonus{
-  background:#091d2e;
-  border:1px solid #294b65;
-  border-radius:12px;
-  padding:15px;
-  margin-bottom:10px;
-}
-
-.chat-message{
-  background:#091d2e;
-  border-left:3px solid #4bd4ff;
-  border-radius:8px;
-  padding:12px;
-  margin-bottom:10px;
-}
-
-.chat-message small{
-  color:#9fb4c5;
-}
-
-.profile{
-  text-align:center;
-}
-
+.profile{text-align:center}
 .avatar{
-  width:80px;
-  height:80px;
-  margin:0 auto 12px;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  border-radius:50%;
-  background:#091d2e;
-  border:2px solid #4bd4ff;
-  font-size:38px;
+  width:110px;height:110px;border-radius:50%;
+  margin:0 auto 15px;overflow:hidden;
+  border:3px solid #4bd4ff;background:#091d2e;
+  display:flex;align-items:center;justify-content:center
 }
+.avatar img{
+  width:100%;height:100%;object-fit:cover;display:none
+}
+.avatar span{font-size:48px}
 
 .role{
-  display:inline-block;
-  background:#169bd5;
-  padding:5px 12px;
-  border-radius:20px;
-  margin-top:8px;
-  font-size:12px;
+  display:inline-block;background:#169bd5;
+  padding:5px 12px;border-radius:20px;font-size:12px
 }
-
-footer{
-  text-align:center;
-  padding:25px 15px 40px;
-  color:#70889a;
-  font-size:12px;
-}
+footer{text-align:center;color:#718899;padding:20px}
 
 @media(max-width:400px){
-  .cards{
-    grid-template-columns:1fr;
-  }
+  .cards{grid-template-columns:1fr}
 }
 </style>
 </head>
 
 <body>
 
+<!-- LOGIN -->
+<div id="loginPage" class="login-page">
+  <div class="login-box">
+    <h1>👑 FAMILY PERSATUAN PEJUANG CREATOR</h1>
+    <p>Silakan masuk ke aplikasi</p>
+
+    <input id="loginUsername" placeholder="Username">
+    <input id="loginPassword" type="password" placeholder="Kata sandi">
+
+    <button onclick="login()">🔐 MASUK</button>
+
+    <p style="font-size:12px">
+      👑 Ketua: <b>ketua</b><br>
+      🛡️ Admin: <b>admin</b><br>
+      Sandi awal: <b>123456</b>
+    </p>
+  </div>
+</div>
+
+<!-- APLIKASI -->
+<div id="appPage" class="hidden">
+
 <header>
   <h1>👑 FAMILY PERSATUAN PEJUANG CREATOR</h1>
   <p>📹 LIVE • 💎 BERLIAN • 🏆 RANKING</p>
+
+  <div class="user-info">
+    👤 <strong id="namaLogin"></strong><br>
+    <span id="roleLogin"></span>
+  </div>
 </header>
 
 <div class="container">
@@ -247,23 +140,19 @@ footer{
   <!-- DASHBOARD -->
   <div class="section">
     <h2>🏠 Dashboard</h2>
-
     <div class="cards">
       <div class="card">
         <strong id="totalAnggota">0</strong>
         <span>👥 Total Anggota</span>
       </div>
-
       <div class="card">
         <strong id="totalBerlian">0</strong>
         <span>💎 Total Berlian</span>
       </div>
-
       <div class="card">
         <strong id="totalLive">0</strong>
         <span>📹 Total Live</span>
       </div>
-
       <div class="card">
         <strong id="totalJam">0</strong>
         <span>⏱️ Total Jam Live</span>
@@ -278,66 +167,34 @@ footer{
   </div>
 
   <!-- TAMBAH ANGGOTA -->
-  <div class="section">
-    <h2>➕ Tambah Anggota</h2>
+  <div id="tambahSection" class="section">
+    <h2>➕ Daftarkan Anggota</h2>
 
-    <input
-      id="namaAnggota"
-      type="text"
-      placeholder="Masukkan nama anggota"
-    >
-
-    <input
-      id="idTikTok"
-      type="text"
-      placeholder="Masukkan ID TikTok"
-    >
+    <input id="namaAnggota" placeholder="Nama lengkap">
+    <input id="agencyAnggota" placeholder="Nama Agency">
+    <input id="usernameAnggota" placeholder="Username">
+    <input id="passwordAnggota" type="password" placeholder="Kata sandi">
 
     <select id="roleAnggota">
       <option value="Anggota">👤 Anggota</option>
       <option value="Admin">🛡️ Admin</option>
     </select>
 
-    <button onclick="tambahAnggota()">
-      ➕ Tambah Anggota
-    </button>
+    <button onclick="tambahAnggota()">➕ DAFTARKAN</button>
   </div>
 
   <!-- CATAT LIVE -->
-  <div class="section">
+  <div id="liveSection" class="section">
     <h2>📹 Catat Live</h2>
 
     <select id="namaLive">
       <option value="">Pilih Anggota</option>
     </select>
 
-    <input
-      id="durasiLive"
-      type="number"
-      min="0"
-      step="0.5"
-      placeholder="Durasi live (jam)"
-    >
+    <input id="durasiLive" type="number" step="0.5" placeholder="Durasi live (jam)">
+    <input id="berlianLive" type="number" placeholder="Jumlah berlian">
 
-    <input
-      id="berlianLive"
-      type="number"
-      min="0"
-      placeholder="Jumlah berlian"
-    >
-
-    <button onclick="catatLive()">
-      💾 Simpan Data Live
-    </button>
-  </div>
-
-  <!-- TOTAL BERLIAN -->
-  <div class="section">
-    <h2>💎 Total Berlian Family</h2>
-    <div class="card">
-      <strong id="berlianBesar">0</strong>
-      <span>Total berlian seluruh anggota</span>
-    </div>
+    <button onclick="catatLive()">💾 SIMPAN DATA LIVE</button>
   </div>
 
   <!-- RANKING -->
@@ -352,197 +209,249 @@ footer{
     <div id="riwayatList"></div>
   </div>
 
-  <!-- BONUS -->
-  <div class="section">
-    <h2>🎁 Bonus Anggota</h2>
-
-    <div class="bonus">
-      <strong>🥉 Bonus Aktif</strong>
-      <small>Bonus untuk anggota yang rutin melakukan live.</small>
-    </div>
-
-    <div class="bonus">
-      <strong>🥈 Bonus Berlian</strong>
-      <small>Bonus berdasarkan pencapaian target berlian.</small>
-    </div>
-
-    <div class="bonus">
-      <strong>🥇 Bonus Ranking</strong>
-      <small>Hadiah khusus untuk ranking terbaik.</small>
-    </div>
-  </div>
-
   <!-- CHAT -->
   <div class="section">
     <h2>💬 Chat Family</h2>
 
     <div id="chatList"></div>
 
-    <input
-      id="namaChat"
-      type="text"
-      placeholder="Nama kamu"
-    >
-
-    <textarea
-      id="pesanChat"
-      placeholder="Tulis pesan..."
-    ></textarea>
-
-    <button onclick="kirimChat()">
-      📤 Kirim Pesan
-    </button>
+    <textarea id="pesanChat" placeholder="Tulis pesan..."></textarea>
+    <button onclick="kirimChat()">📤 KIRIM PESAN</button>
   </div>
 
   <!-- PROFIL -->
   <div class="section profile">
-    <div class="avatar">👤</div>
 
-    <h2>WAHYUDI PRATAMA</h2>
+    <div class="avatar">
+      <img id="profileImage" alt="Foto Profil">
+      <span id="avatarIcon">👤</span>
+    </div>
 
-    <div class="role">👑 KETUA FAMILY</div>
+    <input
+      id="uploadPhoto"
+      type="file"
+      accept="image/*"
+      onchange="gantiFotoProfil(event)"
+    >
 
-    <p style="margin-top:15px;color:#9fb4c5;">
-      Family Persatuan Pejuang Creator
-    </p>
+    <h2 id="profilNama"></h2>
+    <p id="profilAgency" style="margin-bottom:10px;color:#aebfcb"></p>
+    <div id="profilRole" class="role"></div>
+
+  </div>
+
+  <!-- GANTI SANDI -->
+  <div class="section">
+    <h2>🔐 Ganti Sandi</h2>
+
+    <input id="sandiLama" type="password" placeholder="Sandi lama">
+    <input id="sandiBaru" type="password" placeholder="Sandi baru">
+    <input id="ulangSandi" type="password" placeholder="Ulangi sandi baru">
+
+    <button onclick="gantiSandi()">🔑 GANTI SANDI</button>
+  </div>
+
+  <!-- LOGOUT -->
+  <div class="section">
+    <button class="danger" onclick="logout()">🚪 KELUAR APLIKASI</button>
   </div>
 
 </div>
 
-<footer>
-  © 2026 Family Persatuan Pejuang Creator
-</footer>
+<footer>© 2026 Family Persatuan Pejuang Creator</footer>
+
+</div>
 
 <script>
 
-let anggota =
-  JSON.parse(localStorage.getItem("anggotaFamily")) || [
-    {
-      id: Date.now(),
-      nama: "WAHYUDI PRATAMA",
-      tiktok: "-",
-      role: "Ketua",
-      berlian: 0,
-      jam: 0,
-      live: 0
-    }
-  ];
+const STORAGE_USERS = "familyUsersV2";
+const STORAGE_LIVE = "familyRiwayatV2";
+const STORAGE_CHAT = "familyChatV2";
+const STORAGE_CURRENT = "familyCurrentUserV2";
 
-let riwayat =
-  JSON.parse(localStorage.getItem("riwayatFamily")) || [];
+let users = JSON.parse(localStorage.getItem(STORAGE_USERS)) || [
+  {
+    id:1,
+    nama:"WAHYUDI PRATAMA",
+    agency:"Family Persatuan Pejuang Creator",
+    username:"ketua",
+    password:"123456",
+    role:"Ketua",
+    berlian:0,
+    jam:0,
+    live:0
+  },
+  {
+    id:2,
+    nama:"ADMIN FAMILY",
+    agency:"Family Persatuan Pejuang Creator",
+    username:"admin",
+    password:"123456",
+    role:"Admin",
+    berlian:0,
+    jam:0,
+    live:0
+  }
+];
 
-let chat =
-  JSON.parse(localStorage.getItem("chatFamily")) || [];
-
+let riwayat = JSON.parse(localStorage.getItem(STORAGE_LIVE)) || [];
+let chat = JSON.parse(localStorage.getItem(STORAGE_CHAT)) || [];
+let currentUser = JSON.parse(localStorage.getItem(STORAGE_CURRENT)) || null;
 
 function simpanData(){
-  localStorage.setItem(
-    "anggotaFamily",
-    JSON.stringify(anggota)
-  );
-
-  localStorage.setItem(
-    "riwayatFamily",
-    JSON.stringify(riwayat)
-  );
-
-  localStorage.setItem(
-    "chatFamily",
-    JSON.stringify(chat)
-  );
+  localStorage.setItem(STORAGE_USERS, JSON.stringify(users));
+  localStorage.setItem(STORAGE_LIVE, JSON.stringify(riwayat));
+  localStorage.setItem(STORAGE_CHAT, JSON.stringify(chat));
 }
 
+function login(){
+  const username = document.getElementById("loginUsername").value.trim();
+  const password = document.getElementById("loginPassword").value;
 
-function tambahAnggota(){
+  const user = users.find(u =>
+    u.username === username &&
+    u.password === password
+  );
 
-  const nama =
-    document.getElementById("namaAnggota").value.trim();
-
-  const tiktok =
-    document.getElementById("idTikTok").value.trim();
-
-  const role =
-    document.getElementById("roleAnggota").value;
-
-  if(!nama || !tiktok){
-    alert("Isi nama dan ID TikTok terlebih dahulu.");
+  if(!user){
+    alert("Username atau kata sandi salah.");
     return;
   }
 
-  anggota.push({
-    id: Date.now(),
-    nama: nama,
-    tiktok: tiktok,
-    role: role,
-    berlian: 0,
-    jam: 0,
-    live: 0
+  currentUser = {...user};
+
+  localStorage.setItem(
+    STORAGE_CURRENT,
+    JSON.stringify(currentUser)
+  );
+
+  bukaAplikasi();
+}
+
+function bukaAplikasi(){
+  document.getElementById("loginPage").classList.add("hidden");
+  document.getElementById("appPage").classList.remove("hidden");
+
+  document.getElementById("namaLogin").textContent = currentUser.nama;
+  document.getElementById("roleLogin").textContent = currentUser.role;
+  document.getElementById("profilNama").textContent = currentUser.nama;
+  document.getElementById("profilAgency").textContent =
+    "🏢 " + (currentUser.agency || "-");
+  document.getElementById("profilRole").textContent = currentUser.role;
+
+  const bolehKelola =
+    currentUser.role === "Ketua" ||
+    currentUser.role === "Admin";
+
+  document.getElementById("tambahSection")
+    .classList.toggle("hidden", !bolehKelola);
+
+  document.getElementById("liveSection")
+    .classList.toggle("hidden", !bolehKelola);
+
+  tampilkanFotoProfil();
+  render();
+}
+
+function logout(){
+  currentUser = null;
+  localStorage.removeItem(STORAGE_CURRENT);
+
+  document.getElementById("appPage").classList.add("hidden");
+  document.getElementById("loginPage").classList.remove("hidden");
+
+  document.getElementById("loginPassword").value = "";
+}
+
+function tambahAnggota(){
+  if(!["Ketua","Admin"].includes(currentUser.role)){
+    alert("Anda tidak memiliki akses.");
+    return;
+  }
+
+  const nama = document.getElementById("namaAnggota").value.trim();
+  const agency = document.getElementById("agencyAnggota").value.trim();
+  const username = document.getElementById("usernameAnggota").value.trim();
+  const password = document.getElementById("passwordAnggota").value;
+  const role = document.getElementById("roleAnggota").value;
+
+  if(!nama || !agency || !username || !password){
+    alert("Lengkapi semua data.");
+    return;
+  }
+
+  if(users.some(u => u.username.toLowerCase() === username.toLowerCase())){
+    alert("Username sudah digunakan.");
+    return;
+  }
+
+  users.push({
+    id:Date.now(),
+    nama,
+    agency,
+    username,
+    password,
+    role,
+    berlian:0,
+    jam:0,
+    live:0
   });
 
   document.getElementById("namaAnggota").value = "";
-  document.getElementById("idTikTok").value = "";
+  document.getElementById("agencyAnggota").value = "";
+  document.getElementById("usernameAnggota").value = "";
+  document.getElementById("passwordAnggota").value = "";
 
   simpanData();
   render();
 
-  alert("Anggota berhasil ditambahkan.");
+  alert("Akun berhasil didaftarkan.");
 }
 
-
 function hapusAnggota(id){
-
-  const member =
-    anggota.find(item => item.id === id);
-
-  if(member.role === "Ketua"){
-    alert("Ketua tidak dapat dihapus.");
+  if(!["Ketua","Admin"].includes(currentUser.role)){
     return;
   }
 
-  if(confirm("Hapus anggota ini?")){
-    anggota =
-      anggota.filter(item => item.id !== id);
+  const member = users.find(u => u.id === id);
 
+  if(!member || member.role === "Ketua"){
+    alert("Akun ini tidak dapat dihapus.");
+    return;
+  }
+
+  if(confirm("Hapus " + member.nama + "?")){
+    users = users.filter(u => u.id !== id);
     simpanData();
     render();
   }
 }
 
-
 function catatLive(){
+  const id = Number(document.getElementById("namaLive").value);
+  const jam = Number(document.getElementById("durasiLive").value);
+  const berlian = Number(document.getElementById("berlianLive").value) || 0;
 
-  const id =
-    Number(document.getElementById("namaLive").value);
-
-  const jam =
-    Number(document.getElementById("durasiLive").value) || 0;
-
-  const berlian =
-    Number(document.getElementById("berlianLive").value) || 0;
-
-  if(!id){
-    alert("Pilih anggota terlebih dahulu.");
+  if(!id || !jam || jam <= 0){
+    alert("Pilih anggota dan masukkan durasi live.");
     return;
   }
 
-  if(jam <= 0){
-    alert("Masukkan durasi live.");
-    return;
-  }
+  const member = users.find(u => u.id === id);
 
-  const member =
-    anggota.find(item => item.id === id);
+  if(!member) return;
 
   member.jam += jam;
   member.berlian += berlian;
   member.live += 1;
 
   riwayat.unshift({
-    id: Date.now(),
-    nama: member.nama,
-    jam: jam,
-    berlian: berlian,
-    tanggal: new Date().toLocaleString("id-ID")
+    id:Date.now(),
+    nama:member.nama,
+    agency:member.agency,
+    jam,
+    berlian,
+    tanggal:new Date().toLocaleString("id-ID")
   });
 
   document.getElementById("durasiLive").value = "";
@@ -554,25 +463,20 @@ function catatLive(){
   alert("Data live berhasil disimpan.");
 }
 
-
 function kirimChat(){
+  const pesan = document.getElementById("pesanChat").value.trim();
 
-  const nama =
-    document.getElementById("namaChat").value.trim();
-
-  const pesan =
-    document.getElementById("pesanChat").value.trim();
-
-  if(!nama || !pesan){
-    alert("Isi nama dan pesan.");
+  if(!pesan){
+    alert("Tulis pesan terlebih dahulu.");
     return;
   }
 
   chat.unshift({
-    id: Date.now(),
-    nama: nama,
-    pesan: pesan,
-    waktu: new Date().toLocaleString("id-ID")
+    id:Date.now(),
+    nama:currentUser.nama,
+    agency:currentUser.agency,
+    pesan,
+    waktu:new Date().toLocaleString("id-ID")
   });
 
   document.getElementById("pesanChat").value = "";
@@ -581,188 +485,196 @@ function kirimChat(){
   render();
 }
 
+function gantiSandi(){
+  const lama = document.getElementById("sandiLama").value;
+  const baru = document.getElementById("sandiBaru").value;
+  const ulang = document.getElementById("ulangSandi").value;
 
-function render(){
+  const index = users.findIndex(u => u.id === currentUser.id);
 
-  const totalBerlian =
-    anggota.reduce(
-      (total,item) =>
-        total + Number(item.berlian),
-      0
-    );
+  if(index === -1) return;
 
-  const totalJam =
-    anggota.reduce(
-      (total,item) =>
-        total + Number(item.jam),
-      0
-    );
-
-  const totalLive =
-    anggota.reduce(
-      (total,item) =>
-        total + Number(item.live),
-      0
-    );
-
-  document.getElementById("totalAnggota").textContent =
-    anggota.length;
-
-  document.getElementById("totalBerlian").textContent =
-    totalBerlian;
-
-  document.getElementById("totalLive").textContent =
-    totalLive;
-
-  document.getElementById("totalJam").textContent =
-    totalJam;
-
-  document.getElementById("berlianBesar").textContent =
-    "💎 " + totalBerlian;
-
-
-  const anggotaList =
-    document.getElementById("anggotaList");
-
-  anggotaList.innerHTML = "";
-
-  anggota.forEach(item => {
-
-    anggotaList.innerHTML += `
-      <div class="item">
-        <div class="row">
-          <div>
-            <strong>${item.nama}</strong>
-            <small>
-              ${item.role} • @${item.tiktok}
-            </small>
-            <small>
-              💎 ${item.berlian} •
-              📹 ${item.live} Live •
-              ⏱️ ${item.jam} Jam
-            </small>
-          </div>
-
-          ${
-            item.role !== "Ketua"
-            ? `<button class="delete"
-                 onclick="hapusAnggota(${item.id})">
-                 Hapus
-               </button>`
-            : ""
-          }
-        </div>
-      </div>
-    `;
-  });
-
-
-  const namaLive =
-    document.getElementById("namaLive");
-
-  namaLive.innerHTML =
-    `<option value="">Pilih Anggota</option>`;
-
-  anggota.forEach(item => {
-    namaLive.innerHTML += `
-      <option value="${item.id}">
-        ${item.nama}
-      </option>
-    `;
-  });
-
-
-  const ranking =
-    [...anggota].sort(
-      (a,b) => b.berlian - a.berlian
-    );
-
-  const rankingList =
-    document.getElementById("rankingList");
-
-  rankingList.innerHTML = "";
-
-  ranking.forEach((item,index) => {
-
-    let medali = "";
-
-    if(index === 0) medali = "🥇";
-    else if(index === 1) medali = "🥈";
-    else if(index === 2) medali = "🥉";
-    else medali = "#" + (index + 1);
-
-    rankingList.innerHTML += `
-      <div class="rank">
-        <div class="rank-number">${medali}</div>
-        <div class="rank-name">
-          <strong>${item.nama}</strong>
-          <small>
-            📹 ${item.live} Live •
-            ⏱️ ${item.jam} Jam
-          </small>
-        </div>
-        <strong>💎 ${item.berlian}</strong>
-      </div>
-    `;
-  });
-
-
-  const riwayatList =
-    document.getElementById("riwayatList");
-
-  if(riwayat.length === 0){
-
-    riwayatList.innerHTML =
-      `<div class="empty">
-        Belum ada riwayat live.
-      </div>`;
-
-  } else {
-
-    riwayatList.innerHTML = "";
-
-    riwayat.forEach(item => {
-      riwayatList.innerHTML += `
-        <div class="item">
-          <strong>📹 ${item.nama}</strong>
-          <small>
-            ⏱️ ${item.jam} Jam •
-            💎 ${item.berlian} Berlian
-          </small>
-          <small>📅 ${item.tanggal}</small>
-        </div>
-      `;
-    });
+  if(users[index].password !== lama){
+    alert("Sandi lama salah.");
+    return;
   }
 
+  if(baru.length < 6){
+    alert("Sandi baru minimal 6 karakter.");
+    return;
+  }
 
-  const chatList =
-    document.getElementById("chatList");
+  if(baru !== ulang){
+    alert("Ulangi sandi baru dengan benar.");
+    return;
+  }
 
-  if(chat.length === 0){
+  users[index].password = baru;
+  currentUser = {...users[index]};
 
-    chatList.innerHTML =
-      `<div class="empty">
-        Belum ada pesan. Mulai percakapan 👋
-      </div>`;
+  localStorage.setItem(
+    STORAGE_CURRENT,
+    JSON.stringify(currentUser)
+  );
 
-  } else {
+  simpanData();
 
-    chatList.innerHTML = "";
+  document.getElementById("sandiLama").value = "";
+  document.getElementById("sandiBaru").value = "";
+  document.getElementById("ulangSandi").value = "";
 
-    chat.forEach(item => {
-      chatList.innerHTML += `
-        <div class="chat-message">
-          <strong>${item.nama}</strong>
-          <p>${item.pesan}</p>
-          <small>${item.waktu}</small>
-        </div>
-      `;
-    });
+  alert("Kata sandi berhasil diganti.");
+}
+
+function gantiFotoProfil(event){
+  const file = event.target.files[0];
+
+  if(!file) return;
+
+  const reader = new FileReader();
+
+  reader.onload = function(e){
+    localStorage.setItem(
+      "familyProfilePhoto_" + currentUser.id,
+      e.target.result
+    );
+
+    tampilkanFotoProfil();
+  };
+
+  reader.readAsDataURL(file);
+}
+
+function tampilkanFotoProfil(){
+  const photo = localStorage.getItem(
+    "familyProfilePhoto_" + currentUser.id
+  );
+
+  const image = document.getElementById("profileImage");
+  const icon = document.getElementById("avatarIcon");
+
+  if(photo){
+    image.src = photo;
+    image.style.display = "block";
+    icon.style.display = "none";
+  }else{
+    image.style.display = "none";
+    icon.style.display = "block";
   }
 }
 
-render();
+function render(){
+
+  const totalBerlian = users.reduce(
+    (t,u) => t + Number(u.berlian || 0), 0
+  );
+
+  const totalJam = users.reduce(
+    (t,u) => t + Number(u.jam || 0), 0
+  );
+
+  const totalLive = users.reduce(
+    (t,u) => t + Number(u.live || 0), 0
+  );
+
+  document.getElementById("totalAnggota").textContent = users.length;
+  document.getElementById("totalBerlian").textContent = totalBerlian;
+  document.getElementById("totalLive").textContent = totalLive;
+  document.getElementById("totalJam").textContent = totalJam;
+
+  /* DAFTAR ANGGOTA */
+  const anggotaList = document.getElementById("anggotaList");
+
+  anggotaList.innerHTML = users.map(u => `
+    <div class="item">
+      <div class="row">
+        <div>
+          <strong>👤 ${u.nama}</strong>
+          <small>🏢 ${u.agency || "-"}</small>
+          <small>🛡️ ${u.role}</small>
+          <small>💎 ${u.berlian} • 📹 ${u.live} Live • ⏱️ ${u.jam} Jam</small>
+        </div>
+
+        ${
+          u.role !== "Ketua" &&
+          ["Ketua","Admin"].includes(currentUser.role)
+          ? `<button class="danger small-btn" onclick="hapusAnggota(${u.id})">Hapus</button>`
+          : ""
+        }
+      </div>
+    </div>
+  `).join("");
+
+  /* PILIH ANGGOTA */
+  document.getElementById("namaLive").innerHTML =
+    `<option value="">Pilih Anggota</option>` +
+    users.map(u =>
+      `<option value="${u.id}">${u.nama} - ${u.agency || "-"}</option>`
+    ).join("");
+
+  /* RANKING */
+  const ranking = [...users].sort(
+    (a,b) => b.berlian - a.berlian
+  );
+
+  document.getElementById("rankingList").innerHTML =
+    ranking.map((u,i) => {
+      const medal =
+        i === 0 ? "🥇" :
+        i === 1 ? "🥈" :
+        i === 2 ? "🥉" : "#" + (i+1);
+
+      return `
+        <div class="rank">
+          <div>${medal}</div>
+          <div class="rank-name">
+            <strong>${u.nama}</strong>
+            <small>🏢 ${u.agency || "-"}</small>
+          </div>
+          <strong>💎 ${u.berlian}</strong>
+        </div>
+      `;
+    }).join("");
+
+  /* RIWAYAT */
+  document.getElementById("riwayatList").innerHTML =
+    riwayat.length
+    ? riwayat.map(r => `
+      <div class="item">
+        <strong>📹 ${r.nama}</strong>
+        <small>🏢 ${r.agency || "-"}</small>
+        <small>⏱️ ${r.jam} Jam • 💎 ${r.berlian}</small>
+        <small>📅 ${r.tanggal}</small>
+      </div>
+    `).join("")
+    : `<div class="empty">Belum ada riwayat live.</div>`;
+
+  /* CHAT */
+  document.getElementById("chatList").innerHTML =
+    chat.length
+    ? chat.map(c => `
+      <div class="item">
+        <strong>💬 ${c.nama}</strong>
+        <small>🏢 ${c.agency || "-"}</small>
+        <p style="margin:8px 0">${c.pesan}</p>
+        <small>${c.waktu}</small>
+      </div>
+    `).join("")
+    : `<div class="empty">Belum ada pesan.</div>`;
+}
+
+/* LOGIN OTOMATIS */
+if(currentUser){
+  const userBaru = users.find(u => u.id === currentUser.id);
+
+  if(userBaru){
+    currentUser = {...userBaru};
+    localStorage.setItem(STORAGE_CURRENT, JSON.stringify(currentUser));
+    bukaAplikasi();
+  }else{
+    localStorage.removeItem(STORAGE_CURRENT);
+  }
+}
 
 </script>
 
