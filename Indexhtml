@@ -1,590 +1,640 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Family TikTok Live Berlian</title>
-
-<style>
-*{
-  box-sizing:border-box;
-  margin:0;
-  padding:0;
-}
-
-body{
-  font-family:Arial,sans-serif;
-  background:#071522;
-  color:#ffffff;
-}
-
-button,input,select{
-  font-family:inherit;
-}
-
-button{
-  border:none;
-  cursor:pointer;
-}
-
-/* LOGIN */
-
-.login-page{
-  min-height:100vh;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  padding:20px;
-}
-
-.login-box{
-  width:100%;
-  max-width:420px;
-  background:#10283d;
-  border:1px solid #315a78;
-  border-radius:25px;
-  padding:30px 20px;
-  text-align:center;
-}
-
-.login-box h1{
-  font-size:27px;
-  margin-bottom:10px;
-}
-
-.login-box p{
-  color:#aabccc;
-  margin-bottom:25px;
-}
-
-.login-box button{
-  width:100%;
-  padding:15px;
-  margin-top:12px;
-  border-radius:12px;
-  background:#168fd1;
-  color:white;
-  font-size:16px;
-  font-weight:bold;
-}
-
-/* HEADER */
-
-.app{
-  min-height:100vh;
-  padding-bottom:85px;
-}
-
-.header{
-  background:#10283d;
-  padding:20px;
-  border-bottom:1px solid #315a78;
-}
-
-.header h1{
-  font-size:23px;
-}
-
-.header p{
-  color:#aabccc;
-  margin-top:8px;
-}
-
-.user{
-  margin-top:15px;
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-}
-
-.role{
-  background:#168fd1;
-  padding:6px 12px;
-  border-radius:20px;
-  font-size:12px;
-  font-weight:bold;
-}
-
-/* MAIN */
-
-.main{
-  max-width:800px;
-  margin:auto;
-  padding:16px;
-}
-
-.welcome{
-  margin-bottom:20px;
-}
-
-.welcome h2{
-  margin-bottom:6px;
-}
-
-.welcome p{
-  color:#aabccc;
-}
-
-/* DASHBOARD */
-
-.cards{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:12px;
-  margin-bottom:20px;
-}
-
-.card{
-  background:#10283d;
-  border:1px solid #315a78;
-  border-radius:20px;
-  padding:18px;
-}
-
-.card strong{
-  display:block;
-  color:#48caff;
-  font-size:32px;
-  margin-bottom:8px;
-}
-
-.card span{
-  color:#b8c8d5;
-}
-
-.panel{
-  background:#10283d;
-  border:1px solid #315a78;
-  border-radius:20px;
-  padding:18px;
-  margin-bottom:16px;
-}
-
-.panel h2{
-  margin-bottom:16px;
-}
-
-/* FORM */
-
-input,select{
-  width:100%;
-  padding:14px;
-  margin-bottom:12px;
-  border-radius:12px;
-  border:1px solid #315a78;
-  background:#081c2c;
-  color:white;
-  font-size:15px;
-}
-
-.action{
-  width:100%;
-  padding:14px;
-  border-radius:12px;
-  background:#168fd1;
-  color:white;
-  font-size:15px;
-  font-weight:bold;
-}
-
-/* LIST */
-
-.member{
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  gap:10px;
-  background:#091d2e;
-  border:1px solid #294b65;
-  padding:14px;
-  border-radius:14px;
-  margin-bottom:10px;
-}
-
-.member strong{
-  display:block;
-}
-
-.member small{
-  color:#9cb0bf;
-}
-
-.delete{
-  background:#c63d4a;
-  color:white;
-  padding:8px 10px;
-  border-radius:8px;
-}
-
-/* RANKING */
-
-.rank{
-  display:flex;
-  align-items:center;
-  gap:12px;
-  padding:14px 0;
-  border-bottom:1px solid #294b65;
-}
-
-.rank-number{
-  font-size:20px;
-  font-weight:bold;
-  width:35px;
-}
-
-.rank-info{
-  flex:1;
-}
-
-.rank-info small{
-  color:#9cb0bf;
-}
-
-/* RIWAYAT */
-
-.history{
-  background:#091d2e;
-  border:1px solid #294b65;
-  padding:14px;
-  border-radius:14px;
-  margin-bottom:10px;
-}
-
-.history small{
-  color:#9cb0bf;
-}
-
-/* CHAT */
-
-.chat-box{
-  min-height:350px;
-  max-height:500px;
-  overflow:auto;
-}
-
-.message{
-  background:#091d2e;
-  border-left:3px solid #48caff;
-  padding:12px;
-  border-radius:10px;
-  margin-bottom:10px;
-}
-
-.message strong{
-  display:block;
-  margin-bottom:5px;
-}
-
-.chat-input{
-  display:flex;
-  gap:8px;
-}
-
-.chat-input input{
-  margin-bottom:0;
-}
-
-.chat-input button{
-  background:#168fd1;
-  color:white;
-  padding:12px;
-  border-radius:12px;
-}
-
-/* PROFIL */
-
-.profile{
-  text-align:center;
-}
-
-.avatar{
-  width:90px;
-  height:90px;
-  margin:auto;
-  border-radius:50%;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  background:#091d2e;
-  border:2px solid #48caff;
-  font-size:40px;
-}
-
-.profile h2{
-  margin-top:15px;
-}
-
-.logout{
-  width:100%;
-  margin-top:20px;
-  padding:14px;
-  background:#c63d4a;
-  color:white;
-  border-radius:12px;
-  font-weight:bold;
-}
-
-/* BOTTOM NAV */
-
-.nav{
-  position:fixed;
-  bottom:0;
-  left:0;
-  width:100%;
-  height:75px;
-  background:#0b1c2b;
-  border-top:1px solid #315a78;
-  display:flex;
-  z-index:100;
-}
-
-.nav button{
-  flex:1;
-  background:transparent;
-  color:#9fb2c2;
-  font-size:11px;
-  display:flex;
-  flex-direction:column;
-  align-items:center;
-  justify-content:center;
-  gap:4px;
-}
-
-.nav button.active{
-  color:#48caff;
-}
-
-.nav span{
-  font-size:21px;
-}
-
-.hidden{
-  display:none;
-}
-
-.empty{
-  text-align:center;
-  color:#9cb0bf;
-  padding:25px;
-}
-
-@media(max-width:450px){
-  .cards{
-    grid-template-columns:1fr 1fr;
-  }
-
-  .header h1{
-    font-size:20px;
-  }
-
-  .card{
-    padding:15px;
-  }
-}
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Family Persatuan Pejuang Creator</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: #0d1b2a;
+      color: #e5e7eb;
+      min-height: 100vh;
+      padding-bottom: 90px;
+    }
+
+    header {
+      background: #172b44;
+      padding: 25px 20px;
+      border-bottom: 1px solid #294867;
+    }
+
+    header h1 {
+      font-size: 23px;
+      margin-bottom: 10px;
+    }
+
+    header p {
+      color: #cbd5e1;
+      font-size: 15px;
+    }
+
+    .container {
+      max-width: 700px;
+      margin: auto;
+      padding: 20px;
+    }
+
+    .welcome {
+      background: #172b44;
+      border: 1px solid #315a80;
+      border-radius: 20px;
+      padding: 20px;
+      margin-bottom: 20px;
+    }
+
+    .welcome h2 {
+      margin-bottom: 8px;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 15px;
+      margin-bottom: 22px;
+    }
+
+    .card {
+      background: #172b44;
+      border: 1px solid #315a80;
+      border-radius: 20px;
+      padding: 22px;
+    }
+
+    .card strong {
+      display: block;
+      font-size: 34px;
+      color: #57d5f5;
+      margin-bottom: 8px;
+    }
+
+    .card span {
+      color: #b9c4d1;
+      font-size: 16px;
+    }
+
+    .panel {
+      background: #172b44;
+      border: 1px solid #315a80;
+      border-radius: 20px;
+      padding: 20px;
+      margin-bottom: 20px;
+    }
+
+    .panel h2 {
+      margin-bottom: 18px;
+    }
+
+    input, select {
+      width: 100%;
+      padding: 15px;
+      margin-bottom: 12px;
+      border-radius: 12px;
+      border: 1px solid #456b8e;
+      background: #0d1b2a;
+      color: white;
+      font-size: 16px;
+    }
+
+    button {
+      width: 100%;
+      padding: 14px;
+      border: none;
+      border-radius: 12px;
+      background: #18b8d8;
+      color: white;
+      font-size: 16px;
+      font-weight: bold;
+      cursor: pointer;
+      margin-top: 5px;
+    }
+
+    button:active {
+      transform: scale(.98);
+    }
+
+    .ranking-item,
+    .history-item,
+    .member-item {
+      background: #0d1b2a;
+      border: 1px solid #294867;
+      padding: 15px;
+      border-radius: 14px;
+      margin-top: 10px;
+    }
+
+    .ranking-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .hidden {
+      display: none;
+    }
+
+    .bottom-nav {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      background: #101f31;
+      border-top: 1px solid #315a80;
+      display: flex;
+      justify-content: space-around;
+      padding: 12px 5px;
+    }
+
+    .nav-btn {
+      background: transparent;
+      color: #b9c4d1;
+      width: auto;
+      margin: 0;
+      padding: 8px 12px;
+      font-size: 13px;
+    }
+
+    .nav-btn.active {
+      color: #57d5f5;
+    }
+
+    .delete {
+      background: #c0392b;
+      margin-top: 10px;
+    }
+
+    .small {
+      color: #9fb0c0;
+      margin-top: 5px;
+      font-size: 14px;
+    }
+
+    @media (max-width: 500px) {
+      .cards {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      header h1 {
+        font-size: 20px;
+      }
+    }
+  </style>
 </head>
 
 <body>
 
-<div id="loginPage" class="login-page">
+<header>
+  <h1>👑 FAMILY PERSATUAN PEJUANG CREATOR</h1>
+  <p>🎥 LIVE • 💎 BERLIAN • 🏆 RANKING</p>
+</header>
 
-  <div class="login-box">
+<div class="container">
 
-    <h1>👑 FAMILY TIKTOK</h1>
+  <!-- DASHBOARD -->
+  <section id="dashboard">
 
-    <p>📹 LIVE • 💎 BERLIAN • 🏆 RANKING</p>
+    <div class="welcome">
+      <h2>👋 Selamat Datang</h2>
+      <p>Dashboard Family Persatuan Pejuang Creator</p>
+    </div>
 
-    <h2>Masuk sebagai</h2>
+    <div class="cards">
+      <div class="card">
+        <strong id="totalAnggota">0</strong>
+        <span>👥 Total Anggota</span>
+      </div>
 
-    <button onclick="login('ketua','WAHYUDI PRATAMA')">
-      👑 Masuk Ketua
-    </button>
+      <div class="card">
+        <strong id="totalBerlian">0</strong>
+        <span>💎 Total Berlian</span>
+      </div>
 
-    <button onclick="login('admin','ADMIN FAMILY')">
-      🛡️ Masuk Admin
-    </button>
+      <div class="card">
+        <strong id="totalLive">0</strong>
+        <span>🎥 Total Live</span>
+      </div>
 
-    <button onclick="login('anggota','ANGGOTA FAMILY')">
-      👤 Masuk Anggota
-    </button>
+      <div class="card">
+        <strong id="totalJam">0</strong>
+        <span>⏱️ Total Jam Live</span>
+      </div>
+    </div>
 
-  </div>
+    <div class="panel">
+      <h2>🏆 Ranking Berlian</h2>
+      <div id="rankingDashboard"></div>
+    </div>
+
+  </section>
+
+
+  <!-- CATAT LIVE -->
+  <section id="catat" class="hidden">
+
+    <div class="panel">
+      <h2>🎥 Catat Live</h2>
+
+      <select id="liveNama">
+        <option value="">Pilih Anggota</option>
+      </select>
+
+      <input
+        type="number"
+        id="berlian"
+        placeholder="Jumlah Berlian"
+      >
+
+      <input
+        type="number"
+        id="jamLive"
+        placeholder="Jumlah Jam Live"
+      >
+
+      <button onclick="catatLive()">
+        💾 Simpan Catatan Live
+      </button>
+    </div>
+
+  </section>
+
+
+  <!-- RIWAYAT -->
+  <section id="riwayat" class="hidden">
+
+    <div class="panel">
+      <h2>📜 Riwayat Live</h2>
+      <div id="riwayatList"></div>
+    </div>
+
+  </section>
+
+
+  <!-- KELOLA -->
+  <section id="kelola" class="hidden">
+
+    <div class="panel">
+      <h2>⚙️ Kelola Anggota</h2>
+
+      <input
+        type="text"
+        id="namaAnggota"
+        placeholder="Nama anggota"
+      >
+
+      <select id="roleAnggota">
+        <option value="anggota">👤 Anggota</option>
+        <option value="admin">🛡️ Admin</option>
+        <option value="ketua">👑 Ketua</option>
+      </select>
+
+      <button onclick="tambahAnggota()">
+        ➕ Tambah Anggota
+      </button>
+    </div>
+
+    <div class="panel">
+      <h2>👥 Daftar Anggota</h2>
+      <div id="anggotaList"></div>
+    </div>
+
+  </section>
 
 </div>
 
 
-<div id="appPage" class="app hidden">
+<nav class="bottom-nav">
 
-  <header class="header">
+  <button class="nav-btn active"
+    onclick="bukaTab('dashboard', this)">
+    💎<br>Dashboard
+  </button>
 
-    <h1>👑 FAMILY TIKTOK</h1>
+  <button class="nav-btn"
+    onclick="bukaTab('catat', this)">
+    🎥<br>Catat Live
+  </button>
 
-    <p>📹 LIVE • 💎 BERLIAN • 🏆 RANKING</p>
+  <button class="nav-btn"
+    onclick="bukaTab('riwayat', this)">
+    📜<br>Riwayat
+  </button>
 
-    <div class="user">
+  <button class="nav-btn"
+    onclick="bukaTab('kelola', this)">
+    ⚙️<br>Kelola
+  </button>
 
-      <strong id="userName"></strong>
-
-      <span id="userRole" class="role"></span>
-
-    </div>
-
-  </header>
-
-
-  <main class="main">
-
-    <!-- DASHBOARD -->
-
-    <section id="dashboard" class="page">
-
-      <div class="welcome">
-
-        <h2 id="welcomeText"></h2>
-
-        <p>Dashboard Family TikTok Live</p>
-
-      </div>
+</nav>
 
 
-      <div class="cards">
+<script>
 
-        <div class="card">
+let anggota =
+  JSON.parse(localStorage.getItem("anggota")) || [];
 
-          <strong id="totalAnggota">1</strong>
+let riwayat =
+  JSON.parse(localStorage.getItem("riwayat")) || [];
 
-          <span>👥 Total Anggota</span>
 
+function simpanData() {
+  localStorage.setItem(
+    "anggota",
+    JSON.stringify(anggota)
+  );
+
+  localStorage.setItem(
+    "riwayat",
+    JSON.stringify(riwayat)
+  );
+}
+
+
+function bukaTab(tab, tombol) {
+
+  document.querySelectorAll("section")
+    .forEach(item => {
+      item.classList.add("hidden");
+    });
+
+  document.getElementById(tab)
+    .classList.remove("hidden");
+
+  document.querySelectorAll(".nav-btn")
+    .forEach(btn => {
+      btn.classList.remove("active");
+    });
+
+  tombol.classList.add("active");
+
+  render();
+}
+
+
+function tambahAnggota() {
+
+  const nama =
+    document.getElementById("namaAnggota")
+    .value.trim();
+
+  const role =
+    document.getElementById("roleAnggota")
+    .value;
+
+  if (!nama) {
+    alert("Masukkan nama anggota!");
+    return;
+  }
+
+  anggota.push({
+    id: Date.now(),
+    nama: nama,
+    role: role,
+    berlian: 0,
+    jamLive: 0,
+    jumlahLive: 0
+  });
+
+  document.getElementById("namaAnggota").value = "";
+
+  simpanData();
+
+  render();
+
+  alert("Anggota berhasil ditambahkan!");
+}
+
+
+function hapusAnggota(id) {
+
+  if (!confirm("Hapus anggota ini?")) return;
+
+  anggota =
+    anggota.filter(item => item.id !== id);
+
+  simpanData();
+
+  render();
+}
+
+
+function catatLive() {
+
+  const id =
+    Number(document.getElementById("liveNama").value);
+
+  const berlian =
+    Number(document.getElementById("berlian").value) || 0;
+
+  const jam =
+    Number(document.getElementById("jamLive").value) || 0;
+
+  if (!id) {
+    alert("Pilih anggota terlebih dahulu!");
+    return;
+  }
+
+  const member =
+    anggota.find(item => item.id === id);
+
+  member.berlian += berlian;
+  member.jamLive += jam;
+  member.jumlahLive += 1;
+
+  riwayat.unshift({
+    id: Date.now(),
+    nama: member.nama,
+    berlian: berlian,
+    jam: jam,
+    waktu: new Date().toLocaleString("id-ID")
+  });
+
+  document.getElementById("berlian").value = "";
+  document.getElementById("jamLive").value = "";
+
+  simpanData();
+
+  render();
+
+  alert("Live berhasil dicatat!");
+}
+
+
+function render() {
+
+  const totalBerlian =
+    anggota.reduce(
+      (total, item) =>
+        total + Number(item.berlian),
+      0
+    );
+
+  const totalJam =
+    anggota.reduce(
+      (total, item) =>
+        total + Number(item.jamLive),
+      0
+    );
+
+  const totalLive =
+    anggota.reduce(
+      (total, item) =>
+        total + Number(item.jumlahLive),
+      0
+    );
+
+
+  document.getElementById("totalAnggota")
+    .textContent = anggota.length;
+
+  document.getElementById("totalBerlian")
+    .textContent = totalBerlian;
+
+  document.getElementById("totalJam")
+    .textContent = totalJam;
+
+  document.getElementById("totalLive")
+    .textContent = totalLive;
+
+
+  const select =
+    document.getElementById("liveNama");
+
+  select.innerHTML =
+    '<option value="">Pilih Anggota</option>';
+
+  anggota.forEach(item => {
+
+    select.innerHTML += `
+      <option value="${item.id}">
+        ${item.nama}
+      </option>
+    `;
+
+  });
+
+
+  const anggotaList =
+    document.getElementById("anggotaList");
+
+  anggotaList.innerHTML = "";
+
+  anggota.forEach(item => {
+
+    anggotaList.innerHTML += `
+      <div class="member-item">
+
+        <strong>${item.nama}</strong>
+
+        <div class="small">
+          ${item.role.toUpperCase()}
+          • 💎 ${item.berlian}
+          • 🎥 ${item.jumlahLive} Live
+          • ⏱️ ${item.jamLive} Jam
         </div>
 
-        <div class="card">
-
-          <strong id="totalBerlian">0</strong>
-
-          <span>💎 Total Berlian</span>
-
-        </div>
-
-        <div class="card">
-
-          <strong id="totalLive">0</strong>
-
-          <span>📹 Total Live</span>
-
-        </div>
-
-        <div class="card">
-
-          <strong id="totalJam">0</strong>
-
-          <span>⏱️ Total Jam Live</span>
-
-        </div>
-
-      </div>
-
-
-      <div class="panel">
-
-        <h2>🏆 Ranking Berlian</h2>
-
-        <div id="rankingDashboard"></div>
-
-      </div>
-
-    </section>
-
-
-    <!-- ANGGOTA -->
-
-    <section id="anggota" class="page hidden">
-
-      <div class="panel">
-
-        <h2>👥 Daftar Anggota</h2>
-
-        <div id="memberForm">
-
-          <input id="namaAnggota"
-          placeholder="Nama anggota">
-
-          <select id="roleAnggota">
-
-            <option value="anggota">
-              Anggota
-            </option>
-
-            <option value="admin">
-              Admin
-            </option>
-
-          </select>
-
-          <button class="action"
-          onclick="tambahAnggota()">
-
-            ➕ Tambah Anggota
-
-          </button>
-
-          <br><br>
-
-        </div>
-
-        <div id="memberList"></div>
-
-      </div>
-
-    </section>
-
-
-    <!-- CATAT LIVE -->
-
-    <section id="live" class="page hidden">
-
-      <div class="panel">
-
-        <h2>📹 Catat Live</h2>
-
-        <input id="namaLive"
-        placeholder="Nama anggota">
-
-        <input id="berlianLive"
-        type="number"
-        placeholder="Jumlah berlian">
-
-        <input id="jamLive"
-        type="number"
-        placeholder="Jumlah jam live">
-
-        <button class="action"
-        onclick="catatLive()">
-
-          📹 Simpan Live
-
+        <button
+          class="delete"
+          onclick="hapusAnggota(${item.id})">
+          🗑️ Hapus
         </button>
 
       </div>
+    `;
 
-    </section>
-
-
-    <!-- RANKING -->
-
-    <section id="ranking" class="page hidden">
-
-      <div class="panel">
-
-        <h2>🏆 Ranking Berlian</h2>
-
-        <div id="rankingList"></div>
-
-      </div>
-
-    </section>
+  });
 
 
-    <!-- RIWAYAT -->
+  const ranking =
+    [...anggota].sort(
+      (a, b) =>
+        Number(b.berlian) -
+        Number(a.berlian)
+    );
 
-    <section id="riwayat" class="
+
+  const rankingDashboard =
+    document.getElementById("rankingDashboard");
+
+  rankingDashboard.innerHTML = "";
+
+  if (ranking.length === 0) {
+
+    rankingDashboard.innerHTML =
+      "<p class='small'>Belum ada data ranking.</p>";
+
+  } else {
+
+    ranking.slice(0, 10)
+      .forEach((item, index) => {
+
+        rankingDashboard.innerHTML += `
+          <div class="ranking-item">
+            <strong>
+              #${index + 1} ${item.nama}
+            </strong>
+
+            <span>
+              💎 ${item.berlian}
+            </span>
+          </div>
+        `;
+
+      });
+
+  }
+
+
+  const riwayatList =
+    document.getElementById("riwayatList");
+
+  riwayatList.innerHTML = "";
+
+  if (riwayat.length === 0) {
+
+    riwayatList.innerHTML =
+      "<p class='small'>Belum ada riwayat live.</p>";
+
+  } else {
+
+    riwayat.forEach(item => {
+
+      riwayatList.innerHTML += `
+        <div class="history-item">
+
+          <strong>
+            🎥 ${item.nama}
+          </strong>
+
+          <div class="small">
+            💎 ${item.berlian} Berlian
+            • ⏱️ ${item.jam} Jam
+          </div>
+
+          <div class="small">
+            📅 ${item.waktu}
+          </div>
+
+        </div>
+      `;
+
+    });
+
+  }
+
+}
+
+
+render();
+
+</script>
+
+</body>
+</html>
