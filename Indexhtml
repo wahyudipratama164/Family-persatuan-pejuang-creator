@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Family TikTok Live Berlian</title>
+
+<style>
+*{
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
+}
+
+body{
+  font-family:Arial,sans-serif;
+  background:#071522;
+  color:#ffffff;
+}
+
+button,input,select{
+  font-family:inherit;
+}
+
+button{
+  border:none;
+  cursor:pointer;
+}
+
+/* LOGIN */
+
+.login-page{
+  min-height:100vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:20px;
+}
+
+.login-box{
+  width:100%;
+  max-width:420px;
+  background:#10283d;
+  border:1px solid #315a78;
+  border-radius:25px;
+  padding:30px 20px;
+  text-align:center;
+}
+
+.login-box h1{
+  font-size:27px;
+  margin-bottom:10px;
+}
+
+.login-box p{
+  color:#aabccc;
+  margin-bottom:25px;
+}
+
+.login-box button{
+  width:100%;
+  padding:15px;
+  margin-top:12px;
+  border-radius:12px;
+  background:#168fd1;
+  color:white;
+  font-size:16px;
+  font-weight:bold;
+}
+
+/* HEADER */
+
+.app{
+  min-height:100vh;
+  padding-bottom:85px;
+}
+
+.header{
+  background:#10283d;
+  padding:20px;
+  border-bottom:1px solid #315a78;
+}
+
+.header h1{
+  font-size:23px;
+}
+
+.header p{
+  color:#aabccc;
+  margin-top:8px;
+}
+
+.user{
+  margin-top:15px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+
+.role{
+  background:#168fd1;
+  padding:6px 12px;
+  border-radius:20px;
+  font-size:12px;
+  font-weight:bold;
+}
+
+/* MAIN */
+
+.main{
+  max-width:800px;
+  margin:auto;
+  padding:16px;
+}
+
+.welcome{
+  margin-bottom:20px;
+}
+
+.welcome h2{
+  margin-bottom:6px;
+}
+
+.welcome p{
+  color:#aabccc;
+}
+
+/* DASHBOARD */
+
+.cards{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:12px;
+  margin-bottom:20px;
+}
+
+.card{
+  background:#10283d;
+  border:1px solid #315a78;
+  border-radius:20px;
+  padding:18px;
+}
+
+.card strong{
+  display:block;
+  color:#48caff;
+  font-size:32px;
+  margin-bottom:8px;
+}
+
+.card span{
+  color:#b8c8d5;
+}
+
+.panel{
+  background:#10283d;
+  border:1px solid #315a78;
+  border-radius:20px;
+  padding:18px;
+  margin-bottom:16px;
+}
+
+.panel h2{
+  margin-bottom:16px;
+}
+
+/* FORM */
+
+input,select{
+  width:100%;
+  padding:14px;
+  margin-bottom:12px;
+  border-radius:12px;
+  border:1px solid #315a78;
+  background:#081c2c;
+  color:white;
+  font-size:15px;
+}
+
+.action{
+  width:100%;
+  padding:14px;
+  border-radius:12px;
+  background:#168fd1;
+  color:white;
+  font-size:15px;
+  font-weight:bold;
+}
+
+/* LIST */
+
+.member{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:10px;
+  background:#091d2e;
+  border:1px solid #294b65;
+  padding:14px;
+  border-radius:14px;
+  margin-bottom:10px;
+}
+
+.member strong{
+  display:block;
+}
+
+.member small{
+  color:#9cb0bf;
+}
+
+.delete{
+  background:#c63d4a;
+  color:white;
+  padding:8px 10px;
+  border-radius:8px;
+}
+
+/* RANKING */
+
+.rank{
+  display:flex;
+  align-items:center;
+  gap:12px;
+  padding:14px 0;
+  border-bottom:1px solid #294b65;
+}
+
+.rank-number{
+  font-size:20px;
+  font-weight:bold;
+  width:35px;
+}
+
+.rank-info{
+  flex:1;
+}
+
+.rank-info small{
+  color:#9cb0bf;
+}
+
+/* RIWAYAT */
+
+.history{
+  background:#091d2e;
+  border:1px solid #294b65;
+  padding:14px;
+  border-radius:14px;
+  margin-bottom:10px;
+}
+
+.history small{
+  color:#9cb0bf;
+}
+
+/* CHAT */
+
+.chat-box{
+  min-height:350px;
+  max-height:500px;
+  overflow:auto;
+}
+
+.message{
+  background:#091d2e;
+  border-left:3px solid #48caff;
+  padding:12px;
+  border-radius:10px;
+  margin-bottom:10px;
+}
+
+.message strong{
+  display:block;
+  margin-bottom:5px;
+}
+
+.chat-input{
+  display:flex;
+  gap:8px;
+}
+
+.chat-input input{
+  margin-bottom:0;
+}
+
+.chat-input button{
+  background:#168fd1;
+  color:white;
+  padding:12px;
+  border-radius:12px;
+}
+
+/* PROFIL */
+
+.profile{
+  text-align:center;
+}
+
+.avatar{
+  width:90px;
+  height:90px;
+  margin:auto;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background:#091d2e;
+  border:2px solid #48caff;
+  font-size:40px;
+}
+
+.profile h2{
+  margin-top:15px;
+}
+
+.logout{
+  width:100%;
+  margin-top:20px;
+  padding:14px;
+  background:#c63d4a;
+  color:white;
+  border-radius:12px;
+  font-weight:bold;
+}
+
+/* BOTTOM NAV */
+
+.nav{
+  position:fixed;
+  bottom:0;
+  left:0;
+  width:100%;
+  height:75px;
+  background:#0b1c2b;
+  border-top:1px solid #315a78;
+  display:flex;
+  z-index:100;
+}
+
+.nav button{
+  flex:1;
+  background:transparent;
+  color:#9fb2c2;
+  font-size:11px;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  gap:4px;
+}
+
+.nav button.active{
+  color:#48caff;
+}
+
+.nav span{
+  font-size:21px;
+}
+
+.hidden{
+  display:none;
+}
+
+.empty{
+  text-align:center;
+  color:#9cb0bf;
+  padding:25px;
+}
+
+@media(max-width:450px){
+  .cards{
+    grid-template-columns:1fr 1fr;
+  }
+
+  .header h1{
+    font-size:20px;
+  }
+
+  .card{
+    padding:15px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<div id="loginPage" class="login-page">
+
+  <div class="login-box">
+
+    <h1>👑 FAMILY TIKTOK</h1>
+
+    <p>📹 LIVE • 💎 BERLIAN • 🏆 RANKING</p>
+
+    <h2>Masuk sebagai</h2>
+
+    <button onclick="login('ketua','WAHYUDI PRATAMA')">
+      👑 Masuk Ketua
+    </button>
+
+    <button onclick="login('admin','ADMIN FAMILY')">
+      🛡️ Masuk Admin
+    </button>
+
+    <button onclick="login('anggota','ANGGOTA FAMILY')">
+      👤 Masuk Anggota
+    </button>
+
+  </div>
+
+</div>
+
+
+<div id="appPage" class="app hidden">
+
+  <header class="header">
+
+    <h1>👑 FAMILY TIKTOK</h1>
+
+    <p>📹 LIVE • 💎 BERLIAN • 🏆 RANKING</p>
+
+    <div class="user">
+
+      <strong id="userName"></strong>
+
+      <span id="userRole" class="role"></span>
+
+    </div>
+
+  </header>
+
+
+  <main class="main">
+
+    <!-- DASHBOARD -->
+
+    <section id="dashboard" class="page">
+
+      <div class="welcome">
+
+        <h2 id="welcomeText"></h2>
+
+        <p>Dashboard Family TikTok Live</p>
+
+      </div>
+
+
+      <div class="cards">
+
+        <div class="card">
+
+          <strong id="totalAnggota">1</strong>
+
+          <span>👥 Total Anggota</span>
+
+        </div>
+
+        <div class="card">
+
+          <strong id="totalBerlian">0</strong>
+
+          <span>💎 Total Berlian</span>
+
+        </div>
+
+        <div class="card">
+
+          <strong id="totalLive">0</strong>
+
+          <span>📹 Total Live</span>
+
+        </div>
+
+        <div class="card">
+
+          <strong id="totalJam">0</strong>
+
+          <span>⏱️ Total Jam Live</span>
+
+        </div>
+
+      </div>
+
+
+      <div class="panel">
+
+        <h2>🏆 Ranking Berlian</h2>
+
+        <div id="rankingDashboard"></div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ANGGOTA -->
+
+    <section id="anggota" class="page hidden">
+
+      <div class="panel">
+
+        <h2>👥 Daftar Anggota</h2>
+
+        <div id="memberForm">
+
+          <input id="namaAnggota"
+          placeholder="Nama anggota">
+
+          <select id="roleAnggota">
+
+            <option value="anggota">
+              Anggota
+            </option>
+
+            <option value="admin">
+              Admin
+            </option>
+
+          </select>
+
+          <button class="action"
+          onclick="tambahAnggota()">
+
+            ➕ Tambah Anggota
+
+          </button>
+
+          <br><br>
+
+        </div>
+
+        <div id="memberList"></div>
+
+      </div>
+
+    </section>
+
+
+    <!-- CATAT LIVE -->
+
+    <section id="live" class="page hidden">
+
+      <div class="panel">
+
+        <h2>📹 Catat Live</h2>
+
+        <input id="namaLive"
+        placeholder="Nama anggota">
+
+        <input id="berlianLive"
+        type="number"
+        placeholder="Jumlah berlian">
+
+        <input id="jamLive"
+        type="number"
+        placeholder="Jumlah jam live">
+
+        <button class="action"
+        onclick="catatLive()">
+
+          📹 Simpan Live
+
+        </button>
+
+      </div>
+
+    </section>
+
+
+    <!-- RANKING -->
+
+    <section id="ranking" class="page hidden">
+
+      <div class="panel">
+
+        <h2>🏆 Ranking Berlian</h2>
+
+        <div id="rankingList"></div>
+
+      </div>
+
+    </section>
+
+
+    <!-- RIWAYAT -->
+
+    <section id="riwayat" class="
