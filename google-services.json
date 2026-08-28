@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "104222126541",
+    "project_id": "familypersatuanpejuangcreator",
+    "storage_bucket": "familypersatuanpejuangcreator.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:104222126541:android:91ae98d78017b3c3dd1484",
+        "android_client_info": {
+          "package_name": "com.familypersatuan.Creator"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDC9VH-rvnh_eHNgHppk5oYbrOiCi8xiHQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
